@@ -1,0 +1,1207 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  /* Header */
+  header {
+    background-color: #ffffff;
+    padding: 15px;
+    border-bottom: 2px solid #007BFF;
+    text-align: center;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .header-icon {
+    font-size: 28px;
+    color: #007BFF;
+  }
+  
+  h1 {
+    font-size: 22px;
+    margin: 0;
+  }
+  
+  main {
+    padding: 15px;
+    padding-bottom: 80px;
+  }
+  
+  h2 {
+    color: #007BFF;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .lang-menu {
+    position: absolute;
+    top: 15px;
+    right: 16px;
+    z-index: 20;
+  }
+  
+  .lang-icon {
+    cursor: pointer;
+    font-size: 28px;
+    color: #007BFF;
+  }
+  
+  .lang-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 10;
+  }
+  
+  .lang-dropdown button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: white;
+    text-align: left;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .lang-dropdown button:hover {
+    background: #f0f0f0;
+  }
+
+  .settings-menu {
+    position: absolute;
+    top: 60px; /* header balandligiga mos */
+    right: 10px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    width: 180px;
+    z-index: 1000;
+  }
+  
+  .settings-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .settings-menu li {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .settings-menu li:last-child {
+    border-bottom: none;
+  }
+  
+  .settings-menu li:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Dastlab yashirin */
+  .hidden {
+    display: none;
+  }
+  
+  
+  
+  /* Teacher Card Styles */
+  .teacher-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+    font-family: sans-serif;
+    display: flex;
+    background: #fff;
+    margin: 10px 0px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+  }
+  
+  .teacher-photo {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  
+  .teacher-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .cefr-label {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 2px 5px;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: bold;
+  }
+  
+  .teacher-details {
+    flex-grow: 1;
+    margin-left: 15px;
+  }
+  
+  .teacher-details h3 {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .teacher-details p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    margin: 5px 0;
+    color: #333;
+  }
+  
+  .emoji {
+    font-size: 18px;
+  }
+
+  .rating .emoji.green {
+    color: green;
+  }
+  
+  .rating .emoji.orange {
+    color: orange;
+  }
+  
+  .rating .emoji.red {
+    color: red;
+  }
+  
+  
+  .apply-box {
+    text-align: center;
+  }
+  
+  .apply-btn {
+    border: 2px solid #007BFF;
+    color: #007bff;
+    padding: 2px 2px;
+    border-radius: 50%;
+    font-size: 18px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .apply-btn:hover {
+    background-color: #007BFF;
+    color: white;
+  }
+  
+  .apply-text {
+    display: block;
+    font-size: 12px;
+    margin-top: 4px;
+    color: #007BFF;
+    font-weight: bold;
+  }
+  
+  .apply-btn .material-icons {
+    font-size: 35px;
+    vertical-align: middle;
+  }
+  
+  /* ============================================= */
+  /*                    Footer                     */
+  /* ============================================= */
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 2px solid #007BFF;
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 0;
+    z-index: 10;
+  }
+  
+  footer a.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  footer a.nav-item .material-icons {
+    font-size: 24px;
+    margin-bottom: 2px;
+  }
+  
+  footer a.nav-item:hover {
+    color: #007BFF;
+  }
+  
+  footer a.nav-item.active {
+    color: #007BFF;
+    font-weight: bold;
+  }  
+/* ============================================= */
+/*                    Footer End                 */
+/* ============================================= */  
+
+/*----------------------------------------------------------------------------------*/
+
+/* ============================================= */
+/*                    Speaking                   */
+/* ============================================= */
+.speaking-header {
+  text-align: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.speaking-header .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.speaking-header .icon {
+  font-size: 28px;
+  color: #007BFF;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.actions a {
+  text-decoration: none;
+}
+
+.actions button {
+  background: linear-gradient(90deg, #007BFF, #0056b3);
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.actions button:hover {
+  background: linear-gradient(90deg, #2890ff, #007BFF);
+}
+
+.groups3{
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 15px;
+  margin-bottom: 80px;
+}
+
+/* Section title */
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  padding-left: 5px;
+  color: #222;
+}
+
+/* Speaking Group Card */
+.group {
+  background-color: white;
+  border-radius: 12px;
+  padding: 15px 20px 20px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Group header */
+.group-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #555;
+  align-items: center;
+}
+
+.group-header i {
+  font-style: normal;
+  font-weight: 400;
+  margin-left: 5px;
+  color: #888;
+}
+
+/* Avatars container */
+.avatars2 {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Single avatar */
+.avatar2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50px;
+  cursor: default;
+}
+
+.avatar2-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(90deg, #007BFF, #0056b3);
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(53,122,189,0.6);
+  position: relative;
+}
+
+/* Likes below avatar */
+.likes {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: #999;
+  user-select: none;
+}
+
+/* Join button container */
+.join-button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+/* Join button style */
+.join-button button {
+  border: 1px solid #007BFF;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #007BFF;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.3s ease;
+}
+
+.join-button button:hover {
+  background: linear-gradient(90deg, #007BFF, #0056b3);
+  color: white;
+}
+
+/* ============================================= */
+/*                    Speaking End               */
+/* ============================================= */
+
+/*----------------------------------------------------------------------------------*/
+
+/* ============================================= */
+/*                    Lessons                    */
+/* ============================================= */
+.lessons-header {
+  background-color: #ffffff;
+  padding: 15px;
+  border-bottom: 2px solid #007BFF;
+  text-align: center;
+}
+
+.lessons-header .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.lessons-header .icon {
+  font-size: 28px;
+  color: #007BFF;
+}
+
+.lessons-header h1 {
+  font-size: 22px;
+  margin: 0;
+}
+
+/* Lessons Main */
+.lessons-main {
+  padding: 15px;
+  padding-bottom: 80px;
+}
+
+.lessons-main h2 {
+  color: #007BFF;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* Lesson Card Styles */
+.lesson-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-left: 4px solid #007BFF;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.03);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.lesson-card:hover {
+  transform: scale(1.01);
+}
+
+.lesson-info h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  color: #007BFF;
+}
+
+.lesson-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Start Button */
+.start-btn {
+  background-color: #007BFF;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 13px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.start-btn:hover {
+  background-color: #0056b3;
+}
+
+/* ============================================= */
+/*                    Lessons End               */
+/* ============================================= */
+
+/*----------------------------------------------------------------------------------*/
+
+/* ============================================= */
+/*                    Homework                   */
+/* ============================================= */
+.homework-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-left: 4px solid #007BFF;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease;
+}
+
+.homework-card:hover {
+  transform: scale(1.01);
+}
+
+.homework-card h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #007BFF;
+}
+
+.homework-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 10px;
+}
+
+.homework-card li {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.note-box {
+  background-color: #f1f1f1;
+  padding: 10px 12px;
+  border-left: 3px solid #007BFF;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.details-btn {
+  background-color: #007BFF;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 13px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.details-btn:hover {
+  background-color: #0056b3;
+}
+
+/* ============================================= */
+/*                    Homework End              */
+/* ============================================= */
+
+/*----------------------------------------------------------------------------------*/
+
+/* ============================================= */
+/*                    Profile                    */
+/* ============================================= */
+.profile-header {
+  background-color: #ffffff;
+  border-bottom: 2px solid #007BFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+}
+
+.profile-title h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.user-id {
+  font-size: 12px;
+  color: #999;
+}
+
+.settings-icon {
+  font-size: 24px;
+  color: #007BFF;
+  cursor: pointer;
+}
+
+/* Profile Avatar & Info */
+.profile-info {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.avatar-icon {
+  font-size: 100px;
+  color: #ccc;
+}
+
+.edit-btn {
+  margin-top: 2px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+}
+
+.phone {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Info Cards */
+.info-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  padding: 0 16px;
+  margin-bottom: 20px;
+}
+
+.info-card {
+  background-color: #007BFF;
+  border-radius: 12px;
+  padding: 10px;
+  flex: 1;
+  text-align: center;
+  font-size: 13px;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  background-color: #f8f9fa;
+  border: 1px solid #007BFF;
+  color: #007BFF;
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+
+/* Menu Section */
+.menu-section {
+  padding: 0 16px 70px; /* extra bottom for footer */
+}
+
+.menu-group {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.menu-item:hover {
+  background-color: #f1f1f1;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item .material-icons {
+  font-size: 20px;
+  color: #007BFF;
+}
+
+/* teacher Container */
+.app-container {
+  width: 100%;
+  background: #fefefe;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.profile-card {
+  padding: 20px;
+}
+
+.profile-top {
+  text-align: center;
+}
+
+.tavatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.icon-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.icon-btn {
+  background: #e7f1fb;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 12px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.title {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  background: #e6f6ff;
+  padding: 15px;
+  border-radius: 14px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.stats div {
+  text-align: center;
+}
+
+.stats span {
+  display: block;
+  color: #777;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  background: #f0f4f9;
+  padding: 10px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+}
+
+.tabs .active-tab {
+  background: #007BFF;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.course-card {
+  background: #ffeef2;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course-header h3 {
+  font-size: 16px;
+}
+
+.heart {
+  font-size: 18px;
+  color: #333;
+}
+
+.course-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 8px 0;
+}
+
+.course-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.rating-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating-row strong {
+  font-size: 22px;
+}
+
+.rating-row span {
+  font-size: 13px;
+  color: #666;
+}
+
+.arrow-btn {
+  background: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 18px;
+  cursor: pointer;
+}
+/* ============================================= */
+/*                    Profile End                */
+/* ============================================= */
+
+/*----------------------------------------------------------------------------------*/
+
+/* ============================================= */
+/*                    Profile Edit               */
+/* ============================================= */
+.back-btn {
+  font-size: 25px;
+  color: #007BFF;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+.profile-avatar {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+  position: relative;
+}
+
+.avatar-circle {
+  font-size: 100px;
+  color: #007BFF;
+}
+
+.camera-btn {
+  position: absolute;
+  bottom: 0;
+  right: calc(50% - 40px);
+  background: white;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.profile-list {
+  padding: 16px;
+}
+
+.profile-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 12px;
+  border: 1px solid #007BFF;
+  border-radius: 12px;
+  padding: 0 15px;
+}
+
+.profile-item span.material-icons {
+  font-size: 24px;
+  margin-right: 16px;
+  margin-top: 25px;
+  color: #007BFF;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info label {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  color: #999;
+}
+
+.profile-info input,
+.profile-info select,
+.profile-info textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 4px;
+  margin-top: 4px;
+  color: #000;
+  background: none;
+}
+
+.profile-info input::placeholder,
+.profile-info textarea::placeholder {
+  color: #ccc;
+}
+
+.form-actions {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.save-btn {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/*----------------------------------------------------------------------------------------------*/
+
+/* ============================================= */
+/*                    Ranking Start              */
+/* ============================================= */
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px 0;
+  border: none;
+  border-radius: 25px;
+  background: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #007BFF;
+  cursor: pointer;
+}
+
+.tab.active {
+  color: #000;
+  background: linear-gradient(90deg, #007BFF, #0056b3);
+  color: #fff;
+  border-radius: 25px;
+}
+
+.info-banner {
+  background: linear-gradient(90deg, #007BFF, #0056b3);
+  color: white;
+  border-radius: 12px;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.info-banner .material-icons {
+  margin-right: 10px;
+  color: gold;
+}
+
+.user-list {
+  padding: 0 10px 80px;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  border: 1px solid #007BFF;
+  border-radius: 12px;
+  position: relative;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.user-info h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.user-info p {
+  margin: 0;
+  color: #888;
+  font-size: 13px;
+}
+
+.user-score {
+  margin-left: auto;
+  margin-right: 10px;
+  text-align: right;
+}
+
+.user-score strong {
+  font-size: 16px;
+  display: block;
+}
+
+.user-score span {
+  font-size: 12px;
+  color: #888;
+}
+
+.rank-badge {
+  position: absolute;
+  left: 40px;
+  bottom: 0;
+  background: #007BFF;
+  color: white;
+  font-weight: bold;
+  padding: 2px 6px;
+  font-size: 12px;
+  border-radius: 999px;
+
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #eee;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 0;
+}
+
+.bottom-nav div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: #999;
+}
+
+.bottom-nav .active {
+  color: #007BFF;
+}
+
+
+
+
+/* Footer (already present but we override color for profile page) */
+footer a.nav-item.active {
+  color: #007BFF;
+  font-weight: bold;
+}
+
+
+/* Gradient background for cards */
+.teacher-card,
+.homework-card,
+.lesson-card,
+.group,
+.menu-group,
+.course-card {
+  background: linear-gradient(145deg, #ffffff, #f0f8ff);
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+}
+
+/* Smooth hover scale */
+.teacher-card:hover,
+.homework-card:hover,
+.lesson-card:hover,
+.group:hover,
+.menu-group:hover,
+.course-card:hover {
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+
+
+/* Rounded icon buttons */
+.icon-btn {
+  border-radius: 50%;
+  background: #e3f2fd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+
+/* Header shadow */
+header,
+.profile-header,
+.lessons-header {
+  box-shadow: 0 2px 6px rgba(0, 123, 255, 0.15);
+}
+
+/* CEFR badge with gradient */
+.cefr-label {
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  color: #333;
+  border: none;
+}
+
+/* Smooth transitions for interactive elements */
+button,
+a,
+.card,
+.menu-item,
+.teacher-card,
+.lesson-card {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover glow effect on profile avatar */
+.tavatar:hover,
+.avatar2-icon:hover {
+  box-shadow: 0 0 12px #007BFF88;
+  transform: scale(1.05);
+}

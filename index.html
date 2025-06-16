@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="app_title">Teachers App</title>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <span class="material-icons header-icon">school</span>
+      <h1 data-i18n="header_title">Teachers</h1>
+    </div>
+
+    <div class="lang-menu">
+      <span class="material-icons lang-icon" id="lang-toggle">translate</span>
+      <div class="lang-dropdown" id="lang-dropdown">
+        <button data-lang="en">English</button>
+        <button data-lang="uz">O‘zbek</button>
+        <button data-lang="ru">Русский</button>
+        <button data-lang="kr">Кирилл</button>
+      </div>
+    </div>
+  </header>
+  
+
+  <!-- Main content -->
+  <main>
+    <h2 data-i18n="main_subtitle">Available teachers</h2>
+
+    <div class="teacher-list">
+
+      <!-- Teacher Azam -->
+      <div class="teacher-card">
+        <div class="teacher-photo">
+          <img src="image/azam.jpg" alt="Teacher Azam">
+          <span class="cefr-label">C2</span>
+        </div>
+        <div class="teacher-details">
+          <h3>Teacher Azam</h3>
+          <div class="rating">
+            <span class="material-icons emoji">sentiment_satisfied_alt</span> 5.0
+          </div>
+          <p data-i18n="teacher_azam_info">IELTS - 8.5 | CEFR 70</p>
+        </div>
+        <div class="apply-box">
+          <a href="azam.html" class="apply-btn">
+            <span class="material-icons">chevron_right</span>
+          </a>
+          <span class="apply-text" data-i18n="apply">APPLY</span>
+        </div>
+      </div>
+
+      <!-- Teacher Zuhra -->
+      <div class="teacher-card">
+        <div class="teacher-photo">
+          <img src="image/Снимок экрана 2025-05-18 220650.png" alt="Teacher Zuhra">
+          <span class="cefr-label">C1</span>
+        </div>
+        <div class="teacher-details">
+          <h3>Teacher Zuhra</h3>
+          <div class="rating">
+            <span class="material-icons emoji">sentiment_satisfied_alt</span> 4.9
+          </div>
+          <p data-i18n="teacher_zuhra_info">IELTS - 8.0 | CEFR 70</p>
+        </div>
+        <div class="apply-box">
+          <a href="zuhra.html" class="apply-btn">
+            <span class="material-icons">chevron_right</span>
+          </a>
+          <span class="apply-text" data-i18n="apply">APPLY</span>
+        </div>
+      </div>
+
+      <!-- Teacher Sardor -->
+      <div class="teacher-card">
+        <div class="teacher-photo">
+          <img src="image/sardor.jpg" alt="Teacher Sardor">
+          <span class="cefr-label">C1</span>
+        </div>
+        <div class="teacher-details">
+          <h3>Teacher Sardor</h3>
+          <div class="rating">
+            <span class="material-icons emoji">sentiment_neutral</span> 4.0
+          </div>
+          <p data-i18n="teacher_sardor_info">IELTS - 8.0</p>
+        </div>
+        <div class="apply-box">
+          <a href="sardor.html" class="apply-btn">
+            <span class="material-icons">chevron_right</span>
+          </a>
+          <span class="apply-text" data-i18n="apply">APPLY</span>
+        </div>
+      </div>
+
+      <!-- Teacher Oybek -->
+      <div class="teacher-card">
+        <div class="teacher-photo">
+          <img src="image/194-1943356_cabeza-hombre-brain-games-the-game-based-on (1).png" alt="Teacher Oybek">
+          <span class="cefr-label">C1</span>
+        </div>
+        <div class="teacher-details">
+          <h3>Teacher Oybek</h3>
+          <div class="rating">
+            <span class="material-icons emoji">sentiment_neutral</span> 3.9
+          </div>
+          <p data-i18n="teacher_oybek_info">IELTS - 7.5 | CEFR 67</p>
+        </div>
+        <div class="apply-box">
+          <a href="oybek.html" class="apply-btn">
+            <span class="material-icons">chevron_right</span>
+          </a>
+          <span class="apply-text" data-i18n="apply">APPLY</span>
+        </div>
+      </div>
+
+      <!-- Teacher Shaxzod -->
+      <div class="teacher-card">
+        <div class="teacher-photo">
+          <img src="image/shaxzod.jpg" alt="Teacher Shaxzod">
+          <span class="cefr-label">C1</span>
+        </div>
+        <div class="teacher-details">
+          <h3>Teacher Shaxzod</h3>
+          <div class="rating">
+            <span class="material-icons emoji">sentiment_dissatisfied</span> 3.0
+          </div>
+          <p data-i18n="teacher_shaxzod_info">IELTS - 7.5</p>
+        </div>
+        <div class="apply-box">
+          <a href="shaxzod.html" class="apply-btn">
+            <span class="material-icons">chevron_right</span>
+          </a>
+          <span class="apply-text" data-i18n="apply">APPLY</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer Navigation -->
+  <footer>
+    <a href="index.html" class="nav-item active">
+      <span class="material-icons">school</span>
+      <p data-i18n="footer_teachers">Teachers</p>
+    </a>
+    <a href="speaking.html" class="nav-item">
+      <span class="material-icons">record_voice_over</span>
+      <p data-i18n="footer_speaking">Speaking</p>
+    </a>
+    <a href="lesson.html" class="nav-item">
+      <span class="material-icons">menu_book</span>
+      <p data-i18n="footer_lessons">Lessons</p>
+    </a>
+    <a href="homework.html" class="nav-item">
+      <span class="material-icons">assignment</span>
+      <p data-i18n="footer_homework">Homework</p>
+    </a>
+    <a href="profile.html" class="nav-item">
+      <span class="material-icons">person</span>
+      <p data-i18n="footer_profile">Profile</p>
+    </a>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/lang.js"></script>
+</body>
+</html>

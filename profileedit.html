@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edit Profile</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <a href="profile.html" class="material-icons back-btn" onclick="goBack()">arrow_back</a>
+      <h1>Edit profile</h1>
+    </div>
+  </header>
+
+  <main>
+    <form class="edit-form" id="profileForm">
+      <div class="profile-avatar">
+        <div class="material-icons avatar-circle">account_circle</div>
+        <label for="avatar-upload" class="camera-btn material-icons">photo_camera</label>
+        <input type="file" id="avatar-upload" hidden>
+      </div>
+
+      <div class="profile-list">
+        <div class="profile-item">
+          <span class="material-icons">person</span>
+          <div class="profile-info">
+            <label for="name">Name</label>
+            <input type="text" id="name" value="Abdullajon Yuldashev" />
+          </div>
+        </div>
+
+        <div class="profile-item">
+          <span class="material-icons">info</span>
+          <div class="profile-info">
+            <label for="about">About me</label>
+            <input type="text" id="about" placeholder="Write about yourself" />
+          </div>
+        </div>
+
+        <div class="profile-item">
+          <span class="material-icons">language</span>
+          <div class="profile-info">
+            <label for="native">Native language</label>
+            <input type="text" id="native" value="Uzbek" />
+          </div>
+        </div>
+
+        <div class="profile-item">
+          <span class="material-icons">translate</span>
+          <div class="profile-info">
+            <label for="english">English level</label>
+            <select id="english">
+              <option selected>B1 (Intermediate)</option>
+              <option>B2 (Upper Intermediate)</option>
+              <option>C1 (Advanced)</option>
+              <option>C2 (Proficient)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="profile-item">
+          <span class="material-icons">calendar_today</span>
+          <div class="profile-info">
+            <label for="age">Age</label>
+            <input type="number" id="age" value="20" />
+          </div>
+        </div>
+
+        <div class="profile-item">
+          <span class="material-icons">location_on</span>
+          <div class="profile-info">
+            <label for="location">Location</label>
+            <input type="text" id="location" placeholder="Where are you from?" />
+          </div>
+        </div>
+
+        <div class="profile-item">
+          <span class="material-icons">checklist</span>
+          <div class="profile-info">
+            <label for="interests">Interests</label>
+            <input type="text" id="interests" placeholder="What are your interests?" />
+          </div>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="save-btn">Save</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="js/lang.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/profileedit.js"></script>
+</body>
+</html>

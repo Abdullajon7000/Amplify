@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="profile_title">Profile</title>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="profile-header">
+    <div class="profile-title">
+      <h2 data-i18n="profile_name">Shaxzod Orifov</h2>
+      <span class="user-id">#999999</span>
+    </div>
+    <span class="material-icons settings-icon">settings</span>
+
+    <!-- Settings dropdown -->
+  <div id="settingsMenu" class="settings-menu hidden">
+    <ul>
+      <li data-i18n="settings_language">Tilni o‘zgartirish</li>
+      <li data-i18n="settings_account">Hisob sozlamalari</li>
+      <li data-i18n="settings_help">Yordam</li>
+      <li data-i18n="settings_logout">Chiqish</li>
+    </ul>
+  </div>
+  </header>
+  
+
+  <!-- Avatar & Info -->
+  <section class="profile-info">
+    <div class="avatarp">
+      <span class="material-icons avatar-icon">account_circle</span>
+    </div>
+    <a href="profileedit.html"><button class="edit-btn" data-i18n="profile_edit">Edit profile</button></a>
+    <p class="phone">+998 94 977 07 05</p>
+  </section>
+
+  <!-- Balans & Username -->
+  <section class="info-cards">
+    <div class="info-card">
+      <p><strong data-i18n="profile_balance">Balans:</strong><br>999,999 UZS</p>
+    </div>
+    <div class="info-card">
+      <p><strong data-i18n="profile_username">Username:</strong><br>@shakh_oripov</p>
+    </div>
+  </section>
+
+  <!-- Menu Options -->
+  <section class="menu-section">
+    <div class="menu-group">
+      <div class="menu-item">
+        <span class="material-icons">payments</span>
+        <span data-i18n="profile_topup">Balansni to‘ldirish</span>
+        <span class="material-icons">chevron_right</span>
+      </div>
+      <div class="menu-item">
+        <span class="material-icons">menu_book</span>
+        <span data-i18n="profile_active_lessons">Faol darslar</span>
+        <span class="material-icons">chevron_right</span>
+      </div>
+    </div>
+    <div class="menu-group">
+      <div class="menu-item">
+        <span class="material-icons">redeem</span>
+        <span data-i18n="profile_enter_promo">Promokod kiritish</span>
+        <span class="material-icons">chevron_right</span>
+      </div>
+      <div class="menu-item">
+        <span class="material-icons">emoji_events</span>
+        <span data-i18n="profile_rating">Reyting</span>
+        <span class="material-icons">chevron_right</span>
+      </div>
+    </div>
+    <div class="menu-group">
+      <div class="menu-item">
+        <span class="material-icons">mail</span>
+        <span data-i18n="profile_contact">Biz bilan bog‘lanish</span>
+        <span class="material-icons">chevron_right</span>
+      </div>
+      <div class="menu-item">
+        <span class="material-icons">star_rate</span>
+        <span data-i18n="profile_rate_app">Ilovani baholash</span>
+        <span class="material-icons">chevron_right</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Navigation -->
+  <footer>
+    <a href="index.html" class="nav-item">
+      <span class="material-icons">school</span>
+      <p data-i18n="nav_teachers">Teachers</p>
+    </a>
+    <a href="speaking.html" class="nav-item">
+      <span class="material-icons">record_voice_over</span>
+      <p data-i18n="nav_speaking">Speaking</p>
+    </a>
+    <a href="lesson.html" class="nav-item">
+      <span class="material-icons">menu_book</span>
+      <p data-i18n="nav_lessons">Lessons</p>
+    </a>
+    <a href="homework.html" class="nav-item">
+      <span class="material-icons">assignment</span>
+      <p data-i18n="nav_homework">Homework</p>
+    </a>
+    <a href="profile.html" class="nav-item active">
+      <span class="material-icons">person</span>
+      <p data-i18n="nav_profile">Profile</p>
+    </a>
+  </footer>
+
+  <!-- Language Script -->
+  <script src="js/lang.js"></script>
+  <!-- Setting Script -->
+  <script src="js/setting.js"></script>
+</body>
+</html>
